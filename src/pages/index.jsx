@@ -7,12 +7,10 @@ import { Experiencia } from '../components/experiencia/experiencia'
 import { Educacion } from '../components/educacion/educacion'
 import { Footer } from '../components/footer/footer'
 import { Skills } from '../components/skills/skills'
-import { NextUIProvider } from '@nextui-org/react';
 
 
 export default function HomePage({ Component }) {
 	return (
-		<NextUIProvider>
 		<main className={styles.main}>
 			<Head>
 				<title>Portfolio Web</title>
@@ -36,7 +34,6 @@ export default function HomePage({ Component }) {
 
 
 		</main>
-		</NextUIProvider>
 
 	)
 }
