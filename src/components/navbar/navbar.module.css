@@ -1,0 +1,36 @@
+.navbar {
+    height: 100px;
+    background-color: black;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar_right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar_logo{
+    width: 50px;
+  }
+  
+  .icons {
+    padding: 0px 8px;
+    color: white;
+  }
+  
+  .button {
+    width: 140px;
+    height: 36px;
+    color: #212121;
+    background-color: #fafafa;
+    border-radius: 15px;
+    border: none;
+    margin: 15px;
+    font-weight: bold;
+    padding: 0px 15px;
+    font-size: 20px;
+  }

@@ -1,0 +1,31 @@
+.black_divider {
+    width: 80%;
+    border-bottom: 1px solid #000000;
+    padding: 15px;
+}
+
+.experiencia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    padding: 60px;
+    height: auto;
+    color: black;
+}
+
+.experiencia_title {
+    font-weight: 700;
+    font-size: 34px;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.experiencia_description {
+    margin: 40px 10px;
+    font-size: 22px;
+    width: 65%;
+    text-align: center;
+}
