@@ -8,6 +8,11 @@ import { Educacion } from '../components/educacion/educacion'
 import { Footer } from '../components/footer/footer'
 import { Skills } from '../components/skills/skills'
 import { Proyecto } from '../components/proyecto/proyecto'
+import { ComponenteVisibleAcerca } from '../components/AcercaDeMi/ComponenteVisibleAcerca'
+import { ComponenteVisibleEdu } from '../components/educacion/ComponenteVisibleEdu'
+import { ComponenteVisibleExper } from '../components/experiencia/ComponenteVisibleExper'
+import { ComponenteVisibleSkills } from '../components/skills/ComponenteVisibleSkills'
+import { ComponenteVisibleProyectos } from '../components/proyecto/ComponenteVisibleProyectos'
 
 
 
@@ -31,23 +36,23 @@ export default function HomePage({ Component }) {
 			</div>
 
 			<div>
-			<AcercaDeMi />
+				<ComponenteVisibleAcerca />
 			</div>
 
 			<div>
-				<Experiencia />
+				<ComponenteVisibleExper />
 			</div>
 
 			<div>
-				<Educacion />
+				<ComponenteVisibleEdu />
 			</div>
 
 			<div>
-				<Skills />
+				<ComponenteVisibleSkills />
 			</div>
 
 			<div>
-				<Proyecto />
+				<ComponenteVisibleProyectos />
 			</div>
 
 			<div>

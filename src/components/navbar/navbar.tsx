@@ -23,9 +23,7 @@ const Navbar = () => {
 					<a className={styles.icons} href="https://twitter.com/mauripinoricci" target="_blank">
 						< AiOutlineTwitter size="36px" />
 					</a>
-					<button className={styles.button}>
-						Login
-					</button>
+					
 				</div>
 			</nav>
     )
