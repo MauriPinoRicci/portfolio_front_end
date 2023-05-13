@@ -1,0 +1,22 @@
+.progress {
+  display: block;
+  margin: 1rem auto;
+}
+
+.background,
+.foreground {
+  fill: transparent;
+}
+
+.foreground {
+  stroke: #e6e6e6;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  transition: stroke-dashoffset 5s ease-out;
+}
+
+.text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  fill: #333;
+}

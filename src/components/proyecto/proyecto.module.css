@@ -4,7 +4,7 @@
     margin: 15px;
 }
 
-.acerca_de_mi {
+.proyecto {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,7 +15,7 @@
     height: auto;
 }
 
-.acerca_de_mi_title {
+.proyecto_title {
     font-weight: 700;
     font-size: 34px;
     width: 100%;
@@ -23,7 +23,7 @@
     padding-bottom: 15px;
 }
 
-.acerca_de_mi_description {
+.proyecto_description {
     margin: 40px 10px;
     font-size: 22px;
     width: 65%;

@@ -1,15 +1,18 @@
 import styles from './page.module.css'
 import Head from 'next/head'
-import { AcercaDeMi } from '../components/acerca_de_mi/acerca_de_mi'
+import { AcercaDeMi } from '../components/AcercaDeMi/AcercaDeMi'
 import { Navbar } from '../components/navbar/navbar'
 import { Header } from '../components/header/header'
 import { Experiencia } from '../components/experiencia/experiencia'
 import { Educacion } from '../components/educacion/educacion'
 import { Footer } from '../components/footer/footer'
 import { Skills } from '../components/skills/skills'
+import { Proyecto } from '../components/proyecto/proyecto'
+
 
 
 export default function HomePage({ Component }) {
+
 	return (
 		<main className={styles.main}>
 			<Head>
@@ -19,19 +22,37 @@ export default function HomePage({ Component }) {
 					@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
 				</style>
 			</Head>
+			<div>
+				<Navbar />
+			</div>
 
-			<Navbar />
-			<Header />
+			<div>
+				<Header />
+			</div>
+
+			<div>
 			<AcercaDeMi />
-			<Experiencia />
-			<Educacion />
-			<Skills />
-			<Footer />
-			
+			</div>
 
+			<div>
+				<Experiencia />
+			</div>
 
+			<div>
+				<Educacion />
+			</div>
 
+			<div>
+				<Skills />
+			</div>
 
+			<div>
+				<Proyecto />
+			</div>
+
+			<div>
+				<Footer />
+			</div>
 
 		</main>
 
