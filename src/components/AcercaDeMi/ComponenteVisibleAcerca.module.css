@@ -13,10 +13,10 @@
     font-weight: bold;
 }
 
-/* .button:hover {
-    color: green;
+.button:hover {
+    color: #1565c0;
 }
 
 .button:active {
-    color: red;
-  } */
+    color: #b71c1c;
+  } 

@@ -12,3 +12,11 @@
     font-size:  25px;
     font-weight: bold;
 }
+
+.button:hover {
+    color: #1565c0;
+}
+
+.button:active {
+    color: #b71c1c;
+  } 

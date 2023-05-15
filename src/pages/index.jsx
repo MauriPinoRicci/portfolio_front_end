@@ -12,7 +12,7 @@ import { ComponenteVisibleAcerca } from '../components/AcercaDeMi/ComponenteVisi
 import { ComponenteVisibleEdu } from '../components/educacion/ComponenteVisibleEdu'
 import { ComponenteVisibleExper } from '../components/experiencia/ComponenteVisibleExper'
 import { ComponenteVisibleSkills } from '../components/skills/ComponenteVisibleSkills'
-import { ComponenteVisibleProyectos } from '../components/proyecto/ComponenteVisibleProyectos'
+import { ComponenteVisibleProyecto } from '../components/proyecto/ComponenteVisibleProyectos'
 
 
 
@@ -52,7 +52,7 @@ export default function HomePage({ Component }) {
 			</div>
 
 			<div>
-				<ComponenteVisibleProyectos />
+				<ComponenteVisibleProyecto />
 			</div>
 
 			<div>
