@@ -1,3 +1,7 @@
+"use client"
+
+import React, {useState} from "react";
+
 import CircleProgressBar from './CircleProgressBar';
 import { AiFillHtml5 } from 'react-icons/ai'
 import { DiCss3 } from 'react-icons/di'
@@ -13,14 +17,21 @@ import style from './skills.module.css';
 
 const Skills = () => {
 
+  const [showImage, setShowImage] = useState(false);
+	const handleButtonClick = () => {
+    	setShowImage(!showImage);
+	};
+
   return (
+    <section className={style.containers}>
 
-    <div className={style.containers}>
-
-      <section className={style.skills}>
+      <div className={style.skills}>
+        <button onClick={handleButtonClick}>Editar</button>
+			  {showImage && <button>Eliminar</button>}
+			  {showImage && <button>Agregar</button>}
         <h2 className={style.skills_title}>Hard y Soft Skills</h2>
         <span className={style.black_divider} ></span>
-      </section>
+      </div>
 
       <div className={style.item_container}>
         <div className={style.item_circle_container}>
@@ -77,7 +88,7 @@ const Skills = () => {
         </div>
         <FaReact className={`${style.item_icon} ${style.item_icon_react}`} />
       </div>
-    </div>
+    </section>
 
   );
 };

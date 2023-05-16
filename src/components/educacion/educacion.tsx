@@ -1,11 +1,22 @@
-import React from "react";
+"use client"
+
+import React, {useState} from "react";
 import styles from './educacion.module.css'
 import { BsBook } from 'react-icons/bs'
 
 
 const Educacion = () => {
+
+	const [showImage, setShowImage] = useState(false);
+	const handleButtonClick = () => {
+    	setShowImage(!showImage);
+	};
+
     return (
         <section className={styles.educacion}>
+            <button onClick={handleButtonClick}>Editar</button>
+			{showImage && <button>Eliminar</button>}
+			{showImage && <button>Agregar</button>}
             <h2 className={styles.educacion_title}>Educación</h2>
             <span className={styles.white_divider} ></span>
 
