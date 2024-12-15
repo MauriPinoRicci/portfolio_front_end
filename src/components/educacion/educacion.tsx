@@ -18,7 +18,7 @@ const Educacion = () => {
 			{showImage && <button>Eliminar</button>}
 			{showImage && <button>Agregar</button>}
             <h2 className={styles.educacion_title}>Educación</h2>
-            <span className={styles.white_divider} ></span>
+            <span className={styles.white_divider}></span>
 
             <div className={styles.educacion_item_container}>
                 <div className={styles.educacion_item} >

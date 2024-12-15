@@ -39,4 +39,4 @@ const CircleProgressBar = ({ percent, strokeWidth = 10, color }: CircleProgressB
   );
 };
 
-export default CircleProgressBar;
+export {CircleProgressBar}

@@ -6,7 +6,7 @@ import { Footer } from '../components/footer/footer'
 import { AcercaDeMi } from '../components/AcercaDeMi/AcercaDeMi'
 import { Educacion } from '../components/educacion/educacion'
 import { Experiencia } from '../components/experiencia/experiencia'
-import { Skills } from '../components/skills/skills'
+import { CircleProgressBar } from '../components/skills/CircleProgressBar'
 import { Proyecto } from '../components/proyecto/proyecto'
 
 export default function HomePage({ }) {
@@ -25,7 +25,7 @@ export default function HomePage({ }) {
 			<AcercaDeMi />
 			<Experiencia />
 			<Educacion />
-			<Skills />
+			<CircleProgressBar />
 			<Proyecto />
 			<Footer />
 
