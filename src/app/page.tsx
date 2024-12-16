@@ -25,7 +25,7 @@ export default function HomePage({ }) {
 			<AcercaDeMi />
 			<Experiencia />
 			<Educacion />
-			<CircleProgressBar />
+			<CircleProgressBar percent={0} color={''} />
 			<Proyecto />
 			<Footer />
 

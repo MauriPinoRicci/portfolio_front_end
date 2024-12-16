@@ -1,66 +1,72 @@
 .header {
-    height: 600px;
-    position: relative;
-    background: transparent;
-    background-image: url(/images/header.webp);
-    background-size: cover;
-    background-position: center;
+  margin-top: 94px;
+  height: 600px;
+  position: relative;
+  background: transparent;
+  background-image: url(/images/header.webp);
+  background-size: cover;
+  background-position: center;
+}
+
+.header_opacity {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);  /* Cambio en la opacidad del fondo */
+  z-index: 1;
+}
+
+.header_content {
+  position: absolute;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px 15px;
+  color: white;
+}
+
+.header_title {
+  margin: 8px;
+  font-weight: 700;
+  font-size: 40px;
+  width: 100%;
+  text-align: center;
+}
+
+.header_image {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid #fafafa;
+  margin: 8px;
+}
+
+.header_img {
+  display: flex;
+  margin: auto;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.2s ease-in-out;
+}
+
+.header_img:hover {
+  transform: scale(1.2);
+}
+
+.header_description {
+  margin: 8px;
+  font-size: 26px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Ajuste para evitar solapamiento con el Navbar fijo */
+@media (min-width: 768px) {
+  .header {
+      height: calc(100vh - 100px);  /* Ajusta la altura del Header en relación al Navbar */
   }
-  
-  .header_opacity {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: #000000;
-    opacity: .6;
-    z-index: 1;
-  }
-  
-  .header_content {
-    position: absolute;
-    z-index: 2;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 30px 15px;
-    opacity: 1;
-  }
-  
-  .header_title {
-    margin: 8px;
-    font-weight: 700;
-    font-size: 40px;
-    width: 100%;
-    text-align: center;
-  }
-  
-  .header_image {
-    width: 260px;
-    height: 260px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 1px solid #fafafa;
-    margin: 8px;
-  }
-  
-  .header_img {
-    display: flex;
-    margin: auto;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.2s ease-in-out;
-  }
-  
-  .header_img:hover {
-    transform: scale(1.2);
-  }
-  
-  .header_description {
-    margin: 8px;
-    font-size: 26px;
-    width: 100%;
-    text-align: center;
-  }
-  
+}

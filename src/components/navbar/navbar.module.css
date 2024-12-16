@@ -1,36 +1,78 @@
 .navbar {
-    height: 100px;
-    background-color: black;
-    padding: 15px 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .navbar_right {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .navbar_logo{
-    width: 50px;
-  }
-  
-  .icons {
-    padding: 0px 8px;
-    color: white;
-  }
-  
-  .button {
-    width: 140px;
-    height: 36px;
-    color: #212121;
-    background-color: #fafafa;
-    border-radius: 15px;
-    border: none;
-    margin: 15px;
-    font-weight: bold;
-    padding: 0px 15px;
-    font-size: 20px;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;  /* Mantiene el navbar siempre sobre otros elementos */
+  background-color: rgba(0, 0, 0, 0.8);  /* Fondo semi-transparente */
+  color: white;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar_links a:hover {
+  color: #00bcd4;
+}
+
+.navbar_right .icons:hover {
+  color: #00bcd4;
+}
+
+/* Ajuste para fondo más oscuro al hacer scroll */
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.9); /* Fondo más oscuro cuando se desplaza */
+}
+
+.navbar_logo {
+  width: 60px;
+}
+
+.navbar_logo:hover {
+  color: #bdbdbd;
+}
+
+.navbar_links {
+  display: flex;
+  gap: 20px;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.navlink {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.navlink:hover {
+  color: #00bcd4;
+}
+
+.navbar_right {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.icons {
+  color: white;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.iconsInsta:hover {
+  color: #833ab4;
+}
+
+.iconsLinkedin:hover {
+  color: #0e76a8;
+}
+
+.iconsGitHub:hover {
+  color: #bdbdbd;
+}

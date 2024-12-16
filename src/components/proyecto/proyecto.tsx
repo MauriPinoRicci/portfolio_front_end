@@ -10,7 +10,7 @@ const Proyecto = () => {
 	};
     
     return (
-        <section className={styles.proyecto}>
+        <section id="Proyecto" className={styles.proyecto}>
             <button onClick={handleButtonClick}>Editar</button>
 			{showImage && <button>Eliminar</button>}
 			{showImage && <button>Agregar</button>}

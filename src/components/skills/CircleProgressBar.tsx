@@ -21,7 +21,7 @@ const CircleProgressBar = ({ percent, strokeWidth = 10, color }: CircleProgressB
   }, [percent, radius, circumference]);
 
   return (
-    <svg className={styles.progress} width="100" height="100">
+    <svg id="Skills" className={styles.progress} width="100" height="100">
       <circle className={styles.background} style={{stroke: color}} cx="50" cy="50" r={radius} strokeWidth={strokeWidth} />
       <circle
         className={styles.foreground}

@@ -4,8 +4,8 @@ import styles from './footer.module.css'
 
 const Footer = () => {
     return (
-        <footer className={styles.footer}>
-				<a href="https://www.instagram.com/mauripinoricci/" target="_blank">Desarrollada por Mauri Pino Ricci</a>
+        <footer id="Footer" className={styles.footer}>
+				<a href="https://www.instagram.com/mauripinoricci/" target="_blank" rel="noopener noreferrer">Desarrollada por Mauri Pino Ricci</a>
 			</footer>
     )
 }
