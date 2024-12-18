@@ -6,7 +6,7 @@
   z-index: 10;  /* Mantiene el navbar siempre sobre otros elementos */
   background-color: rgba(0, 0, 0, 0.8);  /* Fondo semi-transparente */
   color: white;
-  padding: 15px 50px;
+  padding: 10px 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,11 +15,13 @@
 }
 
 .navbar_links a:hover {
-  color: #00bcd4;
+  color: #b71c1c;
+  transition: background-color 0.4s ease;
 }
 
 .navbar_right .icons:hover {
-  color: #00bcd4;
+  color: #b71c1c;
+  transition: background-color 0.4s ease;
 }
 
 /* Ajuste para fondo más oscuro al hacer scroll */
@@ -67,12 +69,16 @@
 
 .iconsInsta:hover {
   color: #833ab4;
+  transition: background-color 0.4s ease;
 }
 
 .iconsLinkedin:hover {
   color: #0e76a8;
+  transition: background-color 0.4s ease;
 }
 
 .iconsGitHub:hover {
-  color: #bdbdbd;
+  color: #b71c1c;
+  transition: background-color 0.4s ease;
 }
+

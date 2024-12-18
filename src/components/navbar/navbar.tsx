@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { AiOutlineInstagram, AiOutlineFacebook, AiOutlineTwitter, AiFillCode, AiOutlineLinkedin, AiOutlineGithub } from 'react-icons/ai';
+import { AiOutlineInstagram, AiOutlineLinkedin, AiOutlineGithub, AiFillCode } from 'react-icons/ai';
 import styles from './navbar.module.css';
 
 export const Navbar = () => {
@@ -20,23 +20,29 @@ export const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleNavLinkClick = (e:any) => {
+    const navLinks = document.querySelectorAll('.navlink');
+    navLinks.forEach((link) => {
+      link.classList.remove(styles.active);
+    });
+    e.target.classList.add(styles.active);
+  };
+
   return (
     <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
-      {/* Logo */}
       <div className={styles.navbar_logo}>
         <AiFillCode size="60px" aria-label="Logo de la página" />
       </div>
 
-      {/* Links a las secciones */}
       <div className={styles.navbar_links}>
-        <a href="#AcercaDemi" className={styles.navlink} aria-label="Sección Acerca de mí">Acerca de mí</a>
-        <a href="#Educacion" className={styles.navlink} aria-label="Sección Educación">Educación</a>
-        <a href="#Experiencia" className={styles.navlink} aria-label="Sección Experiencia">Experiencia</a>
-        <a href="#Proyecto" className={styles.navlink} aria-label="Sección Proyectos">Proyectos</a>
-        <a href="#Skills" className={styles.navlink} aria-label="Sección Skills">Skills</a>
+        <a href="#Header" className={styles.navlink} onClick={handleNavLinkClick} aria-label="Sección Skills">Home</a>
+        <a href="#AcercaDeMi" className={styles.navlink} onClick={handleNavLinkClick} aria-label="Sección Acerca de mí">Acerca de mí</a>
+        <a href="#Educacion" className={styles.navlink} onClick={handleNavLinkClick} aria-label="Sección Educación">Educación</a>
+        <a href="#Experiencia" className={styles.navlink} onClick={handleNavLinkClick} aria-label="Sección Experiencia">Experiencia</a>
+        <a href="#Proyecto" className={styles.navlink} onClick={handleNavLinkClick} aria-label="Sección Proyectos">Proyectos</a>
+        <a href="#Skills" className={styles.navlink} onClick={handleNavLinkClick} aria-label="Sección Skills">Skills</a>
       </div>
 
-      {/* Iconos sociales */}
       <div className={styles.navbar_right}>
         <a
           className={styles.iconsInsta}

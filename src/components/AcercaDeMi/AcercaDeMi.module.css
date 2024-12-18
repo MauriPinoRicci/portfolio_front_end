@@ -1,32 +1,53 @@
-.white_divider {
-    width: 80%;
-    border-bottom: 1px solid #fafafa;
-    margin: 15px;
+.AcercaDeMi {
+  position: relative; /* Necesario para posicionar elementos hijos */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 100px;
+  height: 100vh; /* Hace que la sección ocupe toda la pantalla */
+  border-bottom: 1px solid white;
+  background-image: url('/images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white; /* Para asegurar legibilidad sobre el fondo */
+  text-align: center; /* Mejor alineación del contenido */
 }
 
-.AcercaDeMi {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    flex-wrap: wrap;
-    background-color: black;
-    padding: 60px;
-    height: auto;
-    border-bottom: 1px solid white;
+.backgroundOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9); /* Opacidad del fondo */
+  z-index: 1; /* Para colocarlo detrás del contenido */
+}
+
+.AcercaDeMi_title,
+.AcercaDeMi_description,
+.white_divider {
+  position: relative; /* Para estar encima del overlay */
+  z-index: 2;
 }
 
 .AcercaDeMi_title {
-    font-weight: 700;
-    font-size: 34px;
-    width: 100%;
-    text-align: center;
-    padding-bottom: 15px;
+  font-weight: 700;
+  font-size: 34px;
+  width: 100%;
+  margin-bottom: 10px; /* Margen inferior para separación visual */
+  margin-top: 0; /* Eliminar espaciado superior */
 }
 
 .AcercaDeMi_description {
-    margin: 40px 10px;
-    font-size: 22px;
-    width: 65%;
-    text-align: center;
+  margin: 0 auto; /* Centrado horizontal */
+  font-size: 23px; /* Reducción del tamaño para mejorar la legibilidad */
+  width: 70%; /* Menor ancho del texto */
+  line-height: 1.6; /* Mejora la legibilidad con mayor espaciado entre líneas */
+}
+
+.white_divider {
+  width: 80%;
+  border-bottom: 1px solid #fafafa;
+  margin: 15px auto; /* Mejor espaciado */
 }

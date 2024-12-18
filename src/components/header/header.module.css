@@ -1,6 +1,6 @@
 .header {
-  margin-top: 94px;
-  height: 600px;
+  margin-top: 70px; /* Ajusta el margen para coincidir con la altura del Navbar */
+  min-height: 100vh; /* Ocupa toda la altura de la ventana */
   position: relative;
   background: transparent;
   background-image: url(/images/header.webp);
@@ -8,11 +8,15 @@
   background-position: center;
 }
 
+.noMarginUnderNavbar {
+  margin-top: 0; /* Evitar margen bajo el Navbar */
+}
+
 .header_opacity {
   position: absolute;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);  /* Cambio en la opacidad del fondo */
+  background-color: rgba(0, 0, 0, 0.6); /* Ajuste en la opacidad del fondo */
   z-index: 1;
 }
 
@@ -22,8 +26,9 @@
   height: 100%;
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column; /* Asegura que los elementos se apilen */
+  justify-content: center; /* Centra verticalmente */
+  align-items: center; /* Centra horizontalmente */
   padding: 30px 15px;
   color: white;
 }
@@ -31,8 +36,7 @@
 .header_title {
   margin: 8px;
   font-weight: 700;
-  font-size: 40px;
-  width: 100%;
+  font-size: 3rem; /* Tamaño relativo */
   text-align: center;
 }
 
@@ -42,31 +46,38 @@
   border-radius: 50%;
   overflow: hidden;
   border: 1px solid #fafafa;
-  margin: 8px;
+  margin: 16px 0;
 }
 
 .header_img {
-  display: flex;
-  margin: auto;
   height: 100%;
   object-fit: cover;
   transition: transform 0.2s ease-in-out;
 }
 
 .header_img:hover {
-  transform: scale(1.2);
+  transform: scale(1.1); /* Efecto más sutil */
 }
 
 .header_description {
   margin: 8px;
-  font-size: 26px;
-  width: 100%;
+  font-size: 1.5rem; /* Unidades relativas para responsividad */
   text-align: center;
 }
 
-/* Ajuste para evitar solapamiento con el Navbar fijo */
-@media (min-width: 768px) {
-  .header {
-      height: calc(100vh - 100px);  /* Ajusta la altura del Header en relación al Navbar */
-  }
+.header_button {
+  margin-top: 20px;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #424242; /* Azul llamativo */
+  border: 1px solid white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.header_button:hover {
+  background-color: #b71c1c; /* Efecto hover */
+  transition: background-color 0.4s ease;
 }
