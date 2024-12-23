@@ -3,8 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;  /* Mantiene el navbar siempre sobre otros elementos */
-  background-color: rgba(0, 0, 0, 0.8);  /* Fondo semi-transparente */
+  background-color: rgba(0, 0, 0, 0.8);
   color: white;
   padding: 10px 50px;
   display: flex;
@@ -12,21 +11,11 @@
   align-items: center;
   font-family: Arial, sans-serif;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 10;  /* Siempre arriba del Header */
 }
 
-.navbar_links a:hover {
-  color: #b71c1c;
-  transition: background-color 0.4s ease;
-}
-
-.navbar_right .icons:hover {
-  color: #b71c1c;
-  transition: background-color 0.4s ease;
-}
-
-/* Ajuste para fondo más oscuro al hacer scroll */
 .navbar.scrolled {
-  background-color: rgba(0, 0, 0, 0.9); /* Fondo más oscuro cuando se desplaza */
+  background-color: rgb(0, 0, 0);
 }
 
 .navbar_logo {
@@ -68,17 +57,21 @@
 }
 
 .iconsInsta:hover {
-  color: #833ab4;
-  transition: background-color 0.4s ease;
+  color: #833ab4; /* Instagram color */
 }
 
 .iconsLinkedin:hover {
-  color: #0e76a8;
-  transition: background-color 0.4s ease;
+  color: #0e76a8; /* LinkedIn color */
 }
 
 .iconsGitHub:hover {
-  color: #b71c1c;
-  transition: background-color 0.4s ease;
+  color: #b71c1c; /* GitHub color */
 }
 
+.navbar_links a:hover {
+  color: #b71c1c; /* Resalta el enlace al pasar el cursor */
+}
+
+.navbar_right .icons:hover {
+  color: #b71c1c; /* Resalta el ícono al pasar el cursor */
+}

@@ -1,17 +1,19 @@
+/* Sección AcercaDeMi */
 .AcercaDeMi {
   position: relative; /* Necesario para posicionar elementos hijos */
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  height: auto;
   padding: 100px;
-  height: 100vh; /* Hace que la sección ocupe toda la pantalla */
-  border-bottom: 1px solid white;
   background-image: url('/images/background.jpg');
   background-size: cover;
   background-position: center;
-  color: white; /* Para asegurar legibilidad sobre el fondo */
-  text-align: center; /* Mejor alineación del contenido */
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+  z-index: 1; /* Coloca la sección detrás del Navbar */
 }
 
 .backgroundOverlay {
@@ -20,34 +22,42 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.9); /* Opacidad del fondo */
-  z-index: 1; /* Para colocarlo detrás del contenido */
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2; /* Sobre la sección para cubrirla parcialmente */
 }
 
 .AcercaDeMi_title,
 .AcercaDeMi_description,
 .white_divider {
-  position: relative; /* Para estar encima del overlay */
-  z-index: 2;
+  position: relative;
+  z-index: 3; /* Encima del overlay */
+}
+
+.Navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 4; /* Encima de todo */
 }
 
 .AcercaDeMi_title {
   font-weight: 700;
-  font-size: 34px;
+  font-size: 30px;
   width: 100%;
-  margin-bottom: 10px; /* Margen inferior para separación visual */
-  margin-top: 0; /* Eliminar espaciado superior */
+  margin-bottom: 10px;
+  margin-top: 12px;
 }
 
 .AcercaDeMi_description {
-  margin: 0 auto; /* Centrado horizontal */
-  font-size: 23px; /* Reducción del tamaño para mejorar la legibilidad */
-  width: 70%; /* Menor ancho del texto */
-  line-height: 1.6; /* Mejora la legibilidad con mayor espaciado entre líneas */
+  margin: 0 auto;
+  font-size: 20px;
+  width: 70%;
+  line-height: 1.6;
 }
 
 .white_divider {
   width: 80%;
   border-bottom: 1px solid #fafafa;
-  margin: 15px auto; /* Mejor espaciado */
+  margin: 15px auto;
 }

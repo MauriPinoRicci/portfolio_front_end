@@ -3,6 +3,7 @@
 import React from "react";
 import styles from "./header.module.css";
 import Image from "next/image";
+import { AiFillFilePdf } from "react-icons/ai";
 
 const Header = () => {
   const handleScroll = () => {
@@ -41,6 +42,10 @@ const Header = () => {
         >
           Ingresar
         </button>
+        <a href="https://drive.google.com/uc?export=download&id=1LkacFy3yAIp0R8CVEdRaOmHzvwbQGxD8" download className={styles.download_cv_button}>
+          <AiFillFilePdf size="20px" style={{ marginRight: '8px' }} />
+          Descarga mi CV
+        </a>
       </div>
     </header>
   );

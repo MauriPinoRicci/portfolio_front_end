@@ -1,43 +1,50 @@
 .header {
-  margin-top: 70px; /* Ajusta el margen para coincidir con la altura del Navbar */
-  min-height: 100vh; /* Ocupa toda la altura de la ventana */
+  min-height: 100vh;
   position: relative;
   background: transparent;
   background-image: url(/images/header.webp);
   background-size: cover;
   background-position: center;
-}
-
-.noMarginUnderNavbar {
-  margin-top: 0; /* Evitar margen bajo el Navbar */
+  z-index: 100;  /* Encima del Navbar */
 }
 
 .header_opacity {
   position: absolute;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* Ajuste en la opacidad del fondo */
-  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 8;  /* Encima del fondo pero debajo del Header */
 }
 
 .header_content {
   position: absolute;
-  z-index: 2;
+  z-index: 10;  /* Encima del Header y Navbar */
   height: 100%;
   width: 100%;
   display: flex;
-  flex-direction: column; /* Asegura que los elementos se apilen */
-  justify-content: center; /* Centra verticalmente */
-  align-items: center; /* Centra horizontalmente */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 30px 15px;
   color: white;
 }
 
+
 .header_title {
-  margin: 8px;
+  margin: 16px 8px;
   font-weight: 700;
-  font-size: 3rem; /* Tamaño relativo */
+  font-size: 3rem;
   text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  color: #FFFFFF;
+  padding: 10px;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.header_title:hover {
+  transform: scale(1.05);  
+  cursor: default;
 }
 
 .header_image {
@@ -56,13 +63,20 @@
 }
 
 .header_img:hover {
-  transform: scale(1.1); /* Efecto más sutil */
+  transform: scale(1.1);
 }
 
 .header_description {
   margin: 8px;
-  font-size: 1.5rem; /* Unidades relativas para responsividad */
+  font-size: 1.5rem;
   text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  transition: all 0.8s ease-in-out;
+}
+
+.header_description:hover {
+  transform: scale(1.05);  
+  cursor: default;
 }
 
 .header_button {
@@ -70,14 +84,33 @@
   padding: 12px 30px;
   font-size: 1.2rem;
   color: white;
-  background-color: #424242; /* Azul llamativo */
+  background-color: #424242;
+  border: 1px solid white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.9s ease, color 1.2s ease;
+}
+
+.header_button:hover {
+  background-color: rgb(251, 251, 251);
+  border: 2px solid black;
+  color: black;
+  transition: background-color 0.8s ease, color 0.5s ease;
+}
+
+.download_cv_button {
+  margin-top: 20px;
+  padding: 15px 20px;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #880808;
   border: 1px solid white;
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.header_button:hover {
-  background-color: #b71c1c; /* Efecto hover */
-  transition: background-color 0.4s ease;
+.download_cv_button:hover {
+  background-color: rgb(80, 3, 3);
+  transition: background-color 0.6s ease;
 }

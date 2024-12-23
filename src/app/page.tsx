@@ -28,8 +28,6 @@ export default function HomePage({ }) {
 			<CircleProgressBar percent={0} color={''} />
 			<Proyecto />
 			<Footer />
-
 		</main>
-
 	)
 }

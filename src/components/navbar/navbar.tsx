@@ -6,27 +6,44 @@ import styles from './navbar.module.css';
 
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState<string | null>(null);
+
+  const sections = [
+    { id: 'Header', label: 'Home' },
+    { id: 'AcercaDeMi', label: 'Acerca de mí' },
+    { id: 'Educacion', label: 'Educación' },
+    { id: 'Experiencia', label: 'Experiencia' },
+    { id: 'Proyecto', label: 'Proyectos' },
+    { id: 'Skills', label: 'Skills' },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 10);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleNavLinkClick = (e:any) => {
-    const navLinks = document.querySelectorAll('.navlink');
-    navLinks.forEach((link) => {
-      link.classList.remove(styles.active);
-    });
-    e.target.classList.add(styles.active);
-  };
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visibleSection = entries.find((entry) => entry.isIntersecting)?.target.id;
+        if (visibleSection) {
+          setActiveSection(visibleSection);
+        }
+      },
+      { threshold: 0.6 } // Ajusta para considerar una sección visible al 60%.
+    );
+
+    const sectionElements = document.querySelectorAll('section');
+    sectionElements.forEach((section) => observer.observe(section));
+
+    return () => {
+      sectionElements.forEach((section) => observer.unobserve(section));
+    };
+  }, []);
 
   return (
     <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
@@ -35,12 +52,18 @@ export const Navbar = () => {
       </div>
 
       <div className={styles.navbar_links}>
-        <a href="#Header" className={styles.navlink} onClick={handleNavLinkClick} aria-label="Sección Skills">Home</a>
-        <a href="#AcercaDeMi" className={styles.navlink} onClick={handleNavLinkClick} aria-label="Sección Acerca de mí">Acerca de mí</a>
-        <a href="#Educacion" className={styles.navlink} onClick={handleNavLinkClick} aria-label="Sección Educación">Educación</a>
-        <a href="#Experiencia" className={styles.navlink} onClick={handleNavLinkClick} aria-label="Sección Experiencia">Experiencia</a>
-        <a href="#Proyecto" className={styles.navlink} onClick={handleNavLinkClick} aria-label="Sección Proyectos">Proyectos</a>
-        <a href="#Skills" className={styles.navlink} onClick={handleNavLinkClick} aria-label="Sección Skills">Skills</a>
+        {sections
+          .filter((section) => section.id !== activeSection) // Excluir la sección activa.
+          .map((section) => (
+            <a
+              key={section.id}
+              href={`#${section.id}`}
+              className={styles.navlink}
+              aria-label={`Sección ${section.label}`}
+            >
+              {section.label}
+            </a>
+          ))}
       </div>
 
       <div className={styles.navbar_right}>
