@@ -8,10 +8,19 @@ const AcercaDeMi = () => {
       <h2 className={styles.AcercaDeMi_title}>Acerca de mí...</h2>
       <span className={styles.white_divider}></span>
       <p className={styles.AcercaDeMi_description}>
-        Mi nombre es Mauricio Joaquín Pino Ricci y soy un apasionado de la
-        programación. Lo que realmente me motiva es poder encontrar soluciones
-        innovadoras a problemas complejos mediante código. Mi objetivo es dejar
-        una huella positiva en el mundo a través de la tecnología.
+        Mi nombre es{" "}
+        <a
+          className={styles.link}
+          href="http://instagram.com/mauripinoricci"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Mauricio Joaquín Pino Ricci
+        </a>{" "}
+        y soy un apasionado de la programación. Lo que realmente me motiva es
+        poder encontrar soluciones innovadoras a problemas complejos mediante
+        código. Mi objetivo es dejar una huella positiva en el mundo a través de
+        la tecnología.
         <br />
         <br />
         Soy un desarrollador Fullstack con enfoque en Backend. Me encanta crear

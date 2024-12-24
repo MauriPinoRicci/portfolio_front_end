@@ -2,7 +2,7 @@
   min-height: 100vh;
   position: relative;
   background: transparent;
-  background-image: url(/images/header.webp);
+  background-image: url(/images/background.jpg);
   background-size: cover;
   background-position: center;
   z-index: 100;  /* Encima del Navbar */
@@ -12,7 +12,7 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.8);
   z-index: 8;  /* Encima del fondo pero debajo del Header */
 }
 
@@ -29,22 +29,36 @@
   color: white;
 }
 
-
 .header_title {
-  margin: 16px 8px;
+  margin: 16px;
   font-weight: 700;
   font-size: 3rem;
   text-align: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
   color: #FFFFFF;
-  padding: 10px;
+  padding: 15px;
   border-radius: 8px;
+  position: relative; /* Needed for the ::after pseudo-element */
   transition: all 0.3s ease-in-out;
+  cursor: default;
 }
 
-.header_title:hover {
-  transform: scale(1.05);  
-  cursor: default;
+.header_title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -2px; /* Move the line closer to the text */
+  transform: translateX(-50%);
+  width: 85%; /* Adjust the width of the line */
+  height: 2px; /* Adjust the thickness of the line */
+  background-color: rgba(255, 0, 0, 0.5); /* Red color with 50% opacity */
+  box-shadow: 0 0 8px rgba(255, 0, 0, 0.5); /* Add a soft red shadow */
+  transition: all 0.4s ease-in-out;
+  opacity: 0; /* Initially hidden */
+}
+
+.header_title:hover::after {
+  opacity: 1; /* Show the line on hover */
 }
 
 .header_image {
