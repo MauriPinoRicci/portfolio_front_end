@@ -17,7 +17,7 @@ const Header = () => {
     <header id="Header" className={`${styles.header} ${styles.noMarginUnderNavbar}`}>
       <div className={styles.header_opacity}></div>
       <div className={styles.header_content}>
-        <h1 className={styles.header_title}>Bienvenidos a Mi Portafolio Web</h1>
+        <h1 className={styles.header_title}>Bienvenidos a Mi Página Web</h1>
         <div className={styles.header_image}>
           <a
             href="https://www.linkedin.com/in/mauricio-joaqu%C3%ADn-pino-ricci-055858140/"

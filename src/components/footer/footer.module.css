@@ -1,13 +1,41 @@
 .footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    background-color: #212121;
-    color: white;
-    padding: 5px;
-    height: 80px;
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  z-index: 50; /* Asegurarte de que esté sobre otros elementos */
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between; /* Coloca los elementos en los extremos */
+  align-items: center; /* Alinea los elementos verticalmente */
+  border-top: 1px solid #444;
+  padding: 12px 20px; /* Espaciado interno */
+  font-size: 14px;
+  color: #fafafa;
+}
+
+.footerBottom p {
+  margin: 0; /* Asegúrate de que los párrafos no tengan margen */
+}
+
+
+.heartIcon {
+  color: red; /* Cambia el color a rojo */
+  margin: 1px 0 0 1px; /* Añade espacio entre el texto y el ícono */
+  vertical-align: middle; /* Alinea el ícono con el texto */
+  transition: transform 0.3s ease, color 0.3s ease; /* Efectos suaves */
+}
+
+.heartIcon:hover {
+  transform: scale(1.2); /* Aumenta el tamaño ligeramente al pasar el mouse */
+  color: #ff4d4d; /* Cambia a un tono más claro de rojo */
+}
+
+.link:hover{
+  color: #833ab4;
+}
