@@ -6,7 +6,7 @@
   align-items: center;
   height: 100vh; /* Use the complete window height */
   padding: 0; /* Remove padding */
-  background-image: url('/images/header.webp');
+  background-image: url("/images/header.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -34,7 +34,7 @@
 }
 
 .header_title:hover {
-  transform: scale(1.05);  
+  transform: scale(1.05);
   cursor: default;
 }
 
@@ -63,7 +63,6 @@
   text-shadow: 2px 2px 4px rgba(6, 2, 2, 0.7);
 }
 
-
 .white_divider {
   width: 80%;
   border-bottom: 1px solid #fafafa;
@@ -72,9 +71,60 @@
 
 .link {
   transition: all 0.4s ease-in-out;
+  color: #b71c1c;
+  font-weight: 100;
 }
 
 .link:hover {
   color: #833ab4;
   transform: scale(1.05);
+}
+
+.tech {
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.nodejs:hover {
+  color: #68a063; /* Verde relacionado con Node.js */
+}
+
+.express:hover {
+  color: #808080; /* Gris oscuro para representar simplicidad pero visible en fondo oscuro */
+}
+
+.nextjs:hover {
+  color: #aaaaaa; /* Gris claro para mayor contraste y relacionado con su minimalismo */
+}
+
+.nestjs:hover {
+  color: #e0234e; /* Rojo relacionado con NestJS */
+}
+
+.postgresql:hover {
+  color: #336791; /* Azul de PostgreSQL */
+}
+
+.react:hover {
+  color: #61dafb; /* Azul claro de React */
+}
+
+.redux:hover {
+  color: #764abc; /* Morado de Redux */
+}
+
+.typescript:hover {
+  color: #007acc; /* Azul de TypeScript */
+}
+
+.javascript:hover {
+  color: #f7df1e; /* Amarillo de JavaScript */
+}
+
+.html5:hover {
+  color: #e44d26; /* Naranja de HTML5 */
+}
+
+.css3:hover {
+  color: #1572b6; /* Azul de CSS3 */
 }

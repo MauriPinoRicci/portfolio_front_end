@@ -24,10 +24,10 @@ export default function HomePage() {
         <Navbar />
         <Header />
         <AcercaDeMi />
+        <Proyecto />
         <Experiencia />
         <Educacion />
         <CircleProgressBar percent={0} color={""} />
-        <Proyecto />
       </div>
       <Footer />
     </main>

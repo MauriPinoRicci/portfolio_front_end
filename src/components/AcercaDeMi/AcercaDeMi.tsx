@@ -23,15 +23,34 @@ const AcercaDeMi = () => {
         la tecnología.
         <br />
         <br />
-        Soy un desarrollador Fullstack con enfoque en Backend. Me encanta crear
-        aplicaciones escalables y optimizadas utilizando tecnologías como
-        Node.js, Express, NestJS y PostgreSQL. Siempre estoy en busca de nuevas
-        formas de resolver desafíos técnicos y mejorar mis habilidades.
+        Soy un desarrollador Full Stack con enfoque en{" "}
+        <span style={{ color: "#1b5e20 " }}>Backend</span>. Me encanta crear
+        aplicaciones escalables y optimizadas utilizando tecnologías como{" "}
+        <span className={`${styles.tech} ${styles.nodejs}`}>Node.js</span>,{" "}
+        <span className={`${styles.tech} ${styles.express}`}>Express</span>,{" "}
+        <span className={`${styles.tech} ${styles.nestjs}`}>NestJS</span> y{" "}
+        <span className={`${styles.tech} ${styles.postgresql}`}>
+          PostgreSQL
+        </span>
+        . Siempre estoy en busca de nuevas formas de resolver desafíos técnicos
+        y mejorar mis habilidades.
         <br />
         <br />
-        También cuento con conocimientos en Frontend utilizando React, Next.js,
-        Redux y TypeScript, lo que me permite desarrollar interfaces dinámicas y
-        funcionales. Con un sólido dominio de JavaScript, HTML5 y CSS3, integro
+        También cuento con conocimientos en{" "}
+        <span style={{ color: "#3ABFF8" }}>Frontend</span> utilizando{" "}
+        <span className={`${styles.tech} ${styles.react}`}>React</span>,{" "}
+        <span className={`${styles.tech} ${styles.nextjs}`}>Next.js</span>,{" "}
+        <span className={`${styles.tech} ${styles.redux}`}>Redux</span> y{" "}
+        <span className={`${styles.tech} ${styles.typescript}`}>
+          TypeScript
+        </span>
+        , lo que me permite desarrollar interfaces dinámicas y funcionales. Con
+        un sólido dominio de{" "}
+        <span className={`${styles.tech} ${styles.javascript}`}>
+          JavaScript
+        </span>
+        , <span className={`${styles.tech} ${styles.html5}`}>HTML5</span> y{" "}
+        <span className={`${styles.tech} ${styles.css3}`}>CSS3</span>, integro
         ambos lados del desarrollo para ofrecer soluciones completas, robustas y
         eficientes. Me apasiona el desarrollo de software y siempre busco
         mejorar la arquitectura y el rendimiento de las aplicaciones en las que
