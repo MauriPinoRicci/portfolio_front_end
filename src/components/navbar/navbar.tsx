@@ -45,10 +45,30 @@ export const Navbar = () => {
     };
   }, []);
 
+  // Función para hacer scroll hasta la sección específica con un pequeño offset
+  const scrollToSection = (sectionId:string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      window.scrollTo({
+        top: section.offsetTop - 100,  // Ajusta el offset para que no quede tapado por el navbar
+        behavior: 'smooth',
+      });
+    }
+  };
+
+  // Función para hacer scroll hasta la sección "Proyectos"
+  const scrollToProjects = () => {
+    scrollToSection('Proyecto');
+  };
+
   return (
     <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
-      <div className={styles.navbar_logo}>
-        <AiFillCode size="60px" aria-label="Logo de la página" />
+      <div
+        className={styles.navbar_logo}
+        onClick={scrollToProjects} // Agregar el evento de clic aquí
+        aria-label="Ir a la sección Proyectos"
+      >
+        <AiFillCode size="60px" />
       </div>
 
       <div className={styles.navbar_links}>
@@ -57,7 +77,7 @@ export const Navbar = () => {
           .map((section) => (
             <a
               key={section.id}
-              href={`#${section.id}`}
+              onClick={() => scrollToSection(section.id)} // Cambiado para usar la función de scroll controlado
               className={styles.navlink}
               aria-label={`Sección ${section.label}`}
             >
@@ -98,3 +118,4 @@ export const Navbar = () => {
     </nav>
   );
 };
+

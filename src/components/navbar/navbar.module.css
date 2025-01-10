@@ -5,7 +5,7 @@
   width: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
-  padding: 10px 50px;
+  padding: 5px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -65,7 +65,7 @@
 }
 
 .iconsGitHub:hover {
-  color: #b71c1c; /* GitHub color */
+  color: #2274c7; /* GitHub color */
 }
 
 .navbar_links a:hover {

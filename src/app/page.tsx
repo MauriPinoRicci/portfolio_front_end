@@ -21,8 +21,8 @@ export default function HomePage() {
         </style>
       </Head>
       <div className={styles.content}>
-        <Navbar />
         <Header />
+        <Navbar />
         <AcercaDeMi />
         <Proyecto />
         <Experiencia />

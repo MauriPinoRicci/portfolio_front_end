@@ -9,15 +9,21 @@ const Header = () => {
   const handleScroll = () => {
     const acercaDeMiSection = document.getElementById("AcercaDeMi");
     if (acercaDeMiSection) {
-      acercaDeMiSection.scrollIntoView({ behavior: "smooth" });
+      const offsetTop = acercaDeMiSection.offsetTop;
+      // Desplazamos con un offset para evitar que el navbar tape la sección
+      window.scrollTo({
+        top: offsetTop - 1, // Ajusta este valor según el tamaño de tu navbar
+        behavior: "smooth"
+      });
     }
   };
+
 
   return (
     <header id="Header" className={`${styles.header} ${styles.noMarginUnderNavbar}`}>
       <div className={styles.header_opacity}></div>
       <div className={styles.header_content}>
-        <h1 className={styles.header_title}>Bienvenidos a Mi Página Web</h1>
+        <h1 className={styles.header_title}> Mauricio Joaquín Pino Ricci </h1>
         <div className={styles.header_image}>
           <a
             href="https://www.linkedin.com/in/mauricio-joaqu%C3%ADn-pino-ricci-055858140/"
@@ -34,8 +40,11 @@ const Header = () => {
           </a>
         </div>
         <h2 className={styles.header_description}>
-          Mauricio Joaquín Pino Ricci <br /> Programador Web Full Stack
+          Desarrollador Web Full Stack 
         </h2>
+        <h3 className={styles.extra_content}>
+          Explora mi portafolio y conoce más sobre mí.
+        </h3>
         <button
           className={styles.header_button}
           onClick={handleScroll}
