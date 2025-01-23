@@ -10,8 +10,8 @@
   justify-content: space-between;
   align-items: center;
   font-family: Arial, sans-serif;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  z-index: 10;  /* Siempre arriba del Header */
+  transition: background-color 0.3s ease, box-shadow 2.3s ease;
+  z-index: 10; /* Siempre arriba del Header */
 }
 
 .navbar.scrolled {
@@ -37,11 +37,17 @@
   color: white;
   text-decoration: none;
   font-size: 18px;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, opacity 2.3s ease, visibility ;
 }
 
 .navlink:hover {
   color: #00bcd4;
+}
+
+.navlink.inactive {
+  visibility: hidden; /* Oculta el texto sin dejar espacio */
+  position: absolute; /* Elimina el espacio ocupado */
+  opacity: 0; /* Asegura que también se desvanezca */
 }
 
 .navbar_right {

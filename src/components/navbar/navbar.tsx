@@ -11,9 +11,9 @@ export const Navbar = () => {
   const sections = [
     { id: 'Header', label: 'Home' },
     { id: 'AcercaDeMi', label: 'Acerca de mí' },
+    { id: 'Proyecto', label: 'Proyectos' },
     { id: 'Educacion', label: 'Educación' },
     { id: 'Experiencia', label: 'Experiencia' },
-    { id: 'Proyecto', label: 'Proyectos' },
     { id: 'Skills', label: 'Skills' },
   ];
 
@@ -31,10 +31,12 @@ export const Navbar = () => {
       (entries) => {
         const visibleSection = entries.find((entry) => entry.isIntersecting)?.target.id;
         if (visibleSection) {
-          setActiveSection(visibleSection);
+          setActiveSection(visibleSection);  // Establece la sección activa
+        } else {
+          setActiveSection(null);  // Si no hay ninguna sección visible, elimina la sección activa
         }
       },
-      { threshold: 0.6 } // Ajusta para considerar una sección visible al 60%.
+      { threshold: 0.6 } // Ajusta para considerar una sección visible al 60%
     );
 
     const sectionElements = document.querySelectorAll('section');
@@ -45,45 +47,35 @@ export const Navbar = () => {
     };
   }, []);
 
-  // Función para hacer scroll hasta la sección específica con un pequeño offset
-  const scrollToSection = (sectionId:string) => {
+  const scrollToSection = (sectionId: string, event: React.MouseEvent) => {
+    event.preventDefault(); // Evita el comportamiento por defecto (recarga de página)
     const section = document.getElementById(sectionId);
     if (section) {
-      window.scrollTo({
-        top: section.offsetTop - 100,  // Ajusta el offset para que no quede tapado por el navbar
-        behavior: 'smooth',
-      });
+      section.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
-  };
-
-  // Función para hacer scroll hasta la sección "Proyectos"
-  const scrollToProjects = () => {
-    scrollToSection('Proyecto');
   };
 
   return (
     <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
       <div
         className={styles.navbar_logo}
-        onClick={scrollToProjects} // Agregar el evento de clic aquí
+        onClick={(event) => scrollToSection('Proyecto', event)} // Agregar el evento de clic aquí
         aria-label="Ir a la sección Proyectos"
       >
         <AiFillCode size="60px" />
       </div>
 
       <div className={styles.navbar_links}>
-        {sections
-          .filter((section) => section.id !== activeSection) // Excluir la sección activa.
-          .map((section) => (
-            <a
-              key={section.id}
-              onClick={() => scrollToSection(section.id)} // Cambiado para usar la función de scroll controlado
-              className={styles.navlink}
-              aria-label={`Sección ${section.label}`}
-            >
-              {section.label}
-            </a>
-          ))}
+        {sections.map((section) => (
+          <a
+            key={section.id}
+            onClick={(event) => scrollToSection(section.id, event)} // Cambiado para usar la función de scroll controlado
+            className={`${styles.navlink} ${activeSection === section.id ? styles.inactive : ''}`}
+            aria-label={`Sección ${section.label}`}
+          >
+            {section.label}
+          </a>
+        ))}
       </div>
 
       <div className={styles.navbar_right}>
@@ -118,4 +110,3 @@ export const Navbar = () => {
     </nav>
   );
 };
-
