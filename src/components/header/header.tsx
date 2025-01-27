@@ -26,7 +26,7 @@ const Header = () => {
         <h1 className={styles.header_title}> Mauricio Joaquín Pino Ricci </h1>
         <div className={styles.header_image}>
           <a
-            href="https://www.linkedin.com/in/mauricio-joaqu%C3%ADn-pino-ricci-055858140/"
+            href="https://www.linkedin.com/in/mauripinoricci/"
             target="_blank"
             rel="noopener noreferrer"
           >

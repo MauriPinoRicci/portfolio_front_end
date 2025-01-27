@@ -12,6 +12,7 @@
   font-family: Arial, sans-serif;
   transition: background-color 0.3s ease, box-shadow 2.3s ease;
   z-index: 10; /* Siempre arriba del Header */
+  border-bottom: #444 1px solid;
 }
 
 .navbar.scrolled {

@@ -59,8 +59,8 @@ export const Navbar = () => {
     <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
       <div
         className={styles.navbar_logo}
-        onClick={(event) => scrollToSection('Proyecto', event)} // Agregar el evento de clic aquí
-        aria-label="Ir a la sección Proyectos"
+        onClick={(event) => scrollToSection('Header', event)} // Agregar el evento de clic aquí
+        aria-label="Ir a la sección Home"
       >
         <AiFillCode size="60px" />
       </div>
@@ -90,7 +90,7 @@ export const Navbar = () => {
         </a>
         <a
           className={styles.iconsLinkedin}
-          href="https://www.linkedin.com/in/mauricio-joaqu%C3%ADn-pino-ricci-055858140/"
+          href="https://www.linkedin.com/in/mauripinoricci/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Linkedin"
