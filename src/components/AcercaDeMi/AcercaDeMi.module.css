@@ -12,6 +12,7 @@
   z-index: 1;
   overflow: hidden;
   margin-top: 0;            /* Asegura que no haya un margen superior */
+  padding: 100px 0px 20px 0px;
 }
 
 .backgroundOverlay {
@@ -20,7 +21,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.9);  /* Overlay para oscurecer el fondo */
+  background: rgba(0, 0, 0, 0.8);  /* Overlay para oscurecer el fondo */
   z-index: 2;
 }
 
